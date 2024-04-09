@@ -64,7 +64,7 @@ public class LogInActivity extends AppCompatActivity {
         // Check if the user exists in the database
         if (checkUser(email, password)) {
             // If validation is successful, proceed to the About activity
-            startActivity(new Intent(LogInActivity.this, ActivityAbout.class));
+            startActivity(new Intent(LogInActivity.this, HomeActivity.class));
         } else {
             Toast.makeText(this, "Invalid login credentials or user not registered", Toast.LENGTH_LONG).show();
         }
