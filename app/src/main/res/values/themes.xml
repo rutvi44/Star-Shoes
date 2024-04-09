@@ -1,9 +1,29 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
-    <style name="Base.Theme.Group6_PROG3210_FinalProject" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.Group6_PROG3210_FinalProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary branding color for the app -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <!-- Background color for the entire app -->
+        <item name="android:windowBackground">@color/light </item>
+        <!-- This is the color that will be used for the default text and icons. -->
+        <item name="android:textColor">@color/ColorDark</item>
+        <!-- This is the color of UI elements such as buttons, checkboxes, etc. -->
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <!-- Status bar color in your activities -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+        <!-- Customize your theme with other attributes like fonts, corner radius, etc. -->
     </style>
 
-    <style name="Theme.Group6_PROG3210_FinalProject" parent="Base.Theme.Group6_PROG3210_FinalProject" />
+    <!-- Style for a button that will be used across the app -->
+    <style name="Widget.Group6_PROG3210.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="cornerRadius">50dp</item>
+    </style>
+
 </resources>

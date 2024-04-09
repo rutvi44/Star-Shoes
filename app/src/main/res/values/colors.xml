@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Color resources -->
+    <color name="colorPrimary">#A6988D</color> <!-- Your primary brand color -->
+    <color name="colorPrimaryVariant">#8C7A6B</color> <!-- A darker variant of the primary color -->
+    <color name="white">#F2EDE4</color> <!-- White color for text -->
+    <color name="ColorDark">#051D26</color>
+    <color name="darkGreen">#39403F</color>
+    <color name="light">#D9CEC5</color>
 </resources>
