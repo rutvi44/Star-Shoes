@@ -12,7 +12,7 @@
         <!-- This is the color of UI elements such as buttons, checkboxes, etc. -->
         <item name="colorControlHighlight">@color/colorPrimary</item>
         <!-- Status bar color in your activities -->
-        <item name="android:statusBarColor" tools:targetApi="l">#D1C9C3</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#d9d3ce</item>
         <!-- Customize your theme with other attributes like fonts, corner radius, etc. -->
         <item name="colorAccent">@color/ColorDark</item>
     </style>
