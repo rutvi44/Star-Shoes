@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">StarShoes</string>
+    <string name="mensboot">Mens Boot</string>
+    <string name="furniture">Furniture</string>
+    <string name="menscasualshoes">Mens Casual Shoes</string>
+    <string name="backtoOptions">Go back to Home Types</string>
+    <string name="checkout">Checkout</string>
+    <string name="addtocart">Add to Cart</string>
+    <string name="mensdressshoes">Mens Dress Shoes</string>
 </resources>

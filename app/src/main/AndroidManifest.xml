@@ -29,6 +29,12 @@
             android:exported="false" />
         <activity android:name=".SignUpActivity"
             android:exported="false" />
+        <activity android:name=".MenCasualShoes"
+            android:exported="false" />
+        <activity android:name=".MenBoot"
+            android:exported="false" />
+        <activity android:name=".MenDressShoes"
+            android:exported="false" />
     </application>
 
 </manifest>

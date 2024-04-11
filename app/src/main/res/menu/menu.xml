@@ -19,18 +19,16 @@
             <item
                 android:title="Men">
                 <menu>
-                    <item
-                        android:id="@+id/nav_men_sports"
-                        android:title="Sports"/>
+
                     <item
                         android:id="@+id/nav_men_casual"
                         android:title="Casual"/>
                     <item
-                        android:id="@+id/nav_men_running"
-                        android:title="Running"/>
+                        android:id="@+id/nav_men_dress"
+                        android:title="Dress"/>
                     <item
-                        android:id="@+id/nav_men_loafers"
-                        android:title="Loafers"/>
+                        android:id="@+id/nav_men_boots"
+                        android:title="Boots"/>
                 </menu>
             </item>
             <!-- Women Sub-category -->
@@ -38,36 +36,36 @@
                 android:title="Women">
                 <menu>
                     <item
-                        android:id="@+id/nav_Women_sports"
-                        android:title="Sports"/>
+                        android:id="@+id/nav_Women_flats"
+                        android:title="flats"/>
                     <item
-                        android:id="@+id/nav_Women_casual"
-                        android:title="Casual"/>
+                        android:id="@+id/nav_Women_sandals"
+                        android:title="sandals"/>
                     <item
-                        android:id="@+id/nav_Women_running"
-                        android:title="Running"/>
+                        android:id="@+id/nav_Women_heels"
+                        android:title="heels"/>
                     <item
-                        android:id="@+id/nav_Women_loafers"
-                        android:title="Loafers"/>
+                        android:id="@+id/nav_Women_wedges"
+                        android:title="wedges"/>
                 </menu>
             </item>
             <!-- Kids Sub-category -->
             <item
                 android:title="Kids">
-                    <menu>
-                        <item
-                            android:id="@+id/nav_Kids_sports"
-                            android:title="Sports"/>
-                        <item
-                            android:id="@+id/nav_Kids_sneakers"
-                            android:title="Sneakers"/>
-                        <item
-                            android:id="@+id/nav_Kids_Clogs"
-                            android:title="Clogs"/>
-                        <item
-                            android:id="@+id/nav_Kids_Running"
-                            android:title=" Running"/>
-                    </menu>
+                <menu>
+                    <item
+                        android:id="@+id/nav_Kids_rainboots"
+                        android:title="Rain Boots"/>
+                    <item
+                        android:id="@+id/nav_Kids_lightUpShoes"
+                        android:title="Light-Up Shoes"/>
+                    <item
+                        android:id="@+id/nav_Kids_DressShoes"
+                        android:title="DressShoes"/>
+                    <item
+                        android:id="@+id/nav_Kids_Clog"
+                        android:title="Clog"/>
+                </menu>
             </item>
         </menu>
     </item>

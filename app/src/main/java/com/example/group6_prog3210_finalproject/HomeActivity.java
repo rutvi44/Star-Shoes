@@ -46,6 +46,18 @@ public class HomeActivity extends AppCompatActivity {
         } else if (itemId == R.id.nav_about) {
             Intent about = new Intent(this, ActivityAbout.class);
             startActivity(about);
+        } else if (itemId == R.id.nav_men_boots) {
+            Intent about = new Intent(this, MenBoot.class);
+            startActivity(about);
+        }
+        else if (itemId == R.id.nav_men_dress) {
+            Intent tvs = new Intent(this, MenDressShoes.class);
+            startActivity(tvs);
+            return true;
+        } else if (itemId == R.id.nav_men_casual) {
+            Intent computers = new Intent(this, MenCasualShoes.class);
+            startActivity(computers);
+            return true;
         }
         else {
             return super.onOptionsItemSelected(item);
