@@ -15,20 +15,22 @@
         <item name="android:statusBarColor" tools:targetApi="l">#d9d3ce</item>
         <!-- Customize your theme with other attributes like fonts, corner radius, etc. -->
         <item name="colorAccent">@color/ColorDark</item>
-<!--        &lt;!&ndash; Default button style &ndash;&gt;-->
-<!--        <item name="buttonStyle">@style/CustomButton</item>-->
+
+        <item name="materialButtonStyle">@style/Custom.MaterialButton</item>
+
     </style>
 
-    <!-- Style for a button that will be used across the app -->
-<!--    <style name="Widget.Group6_PROG3210.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">-->
-<!--        <item name="android:backgroundTint">@color/colorPrimary</item>-->
-<!--        <item name="android:textColor">@color/white</item>-->
-<!--        <item name="android:textSize">18sp</item>-->
-<!--        <item name="android:padding">12dp</item>-->
-<!--        <item name="android:layout_margin">8dp</item>-->
-<!--        <item name="cornerRadius">50dp</item>-->
-<!--    </style>-->
+    <!-- Shape Appearance for rounded corners -->
+    <style name="Custom.ShapeAppearance.MaterialButton.Rounded" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">15dp</item> <!-- Rounded corners with 100dp radius -->
+    </style>
 
+    <!-- Custom Button Style -->
+    <style name="Custom.MaterialButton" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/light</item> <!-- Set button text color to red -->
+        <item name="android:textSize">18dp</item>
+        <item name="shapeAppearance">@style/Custom.ShapeAppearance.MaterialButton.Rounded</item> <!-- Apply rounded shape -->
+    </style>
 
 
 </resources>
