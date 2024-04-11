@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenDressShoes">
+    tools:context=".MenDressShoes"
+    android:background="@drawable/background_app">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mensdressshoes"
-        android:textColor="@color/black"
+        android:textColor="@color/ColorDark"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,9 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="228dp"
         android:layout_marginEnd="44dp"
-        android:backgroundTint="#4B65F6"
         android:text="@string/checkout"
-        android:textColor="#E6E6EA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
@@ -84,9 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="228dp"
-        android:backgroundTint="#4B65F6"
         android:text="@string/addtocart"
-        android:textColor="#E6E6EA"
         app:layout_constraintEnd_toStartOf="@+id/checkout_button"
         app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
