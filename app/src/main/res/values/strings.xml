@@ -7,4 +7,6 @@
     <string name="checkout">Checkout</string>
     <string name="addtocart">Add to Cart</string>
     <string name="mensdressshoes">Mens Dress Shoes</string>
+    <string name="title_activity_store_location">StoreLocation</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

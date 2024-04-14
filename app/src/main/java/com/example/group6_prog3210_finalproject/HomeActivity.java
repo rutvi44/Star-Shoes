@@ -18,15 +18,15 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Button btnHome = findViewById(R.id.buttonHome);
-
-        btnHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, ActivityAbout.class);
-                startActivity(intent);
-            }
-        });
+//        Button btnHome = findViewById(R.id.buttonHome);
+//
+//        btnHome.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(HomeActivity.this, ActivityAbout.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     @Override
@@ -46,11 +46,12 @@ public class HomeActivity extends AppCompatActivity {
         } else if (itemId == R.id.nav_about) {
             Intent about = new Intent(this, ActivityAbout.class);
             startActivity(about);
+            return true;
         } else if (itemId == R.id.nav_men_boots) {
             Intent about = new Intent(this, MenBoot.class);
             startActivity(about);
-        }
-        else if (itemId == R.id.nav_men_dress) {
+            return true;
+        } else if (itemId == R.id.nav_men_dress) {
             Intent tvs = new Intent(this, MenDressShoes.class);
             startActivity(tvs);
             return true;
@@ -58,6 +59,23 @@ public class HomeActivity extends AppCompatActivity {
             Intent computers = new Intent(this, MenCasualShoes.class);
             startActivity(computers);
             return true;
+        }
+        else if (itemId == R.id.nav_Women_flats) {
+        Intent computers = new Intent(this, WomenFlatShoes.class);
+        startActivity(computers);
+        return true;
+        } else if (itemId==R.id.nav_Women_heels) {
+        Intent computers = new Intent(this, WomenHeel.class);
+        startActivity(computers);
+        return true;
+        } else if (itemId==R.id.nav_Women_wedges) {
+        Intent computers = new Intent(this, WomenWedges.class);
+        startActivity(computers);
+        return true;
+        } else if (itemId==R.id.nav_store_locator) {
+        Intent computers = new Intent(this, StoreLocation.class);
+        startActivity(computers);
+        return true;
         }
         else {
             return super.onOptionsItemSelected(item);
