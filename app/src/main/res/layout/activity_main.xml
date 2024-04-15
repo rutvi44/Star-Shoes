@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewTotal"
         android:layout_width="186dp"
         android:layout_height="49dp"
         android:text="Star Shoes"
