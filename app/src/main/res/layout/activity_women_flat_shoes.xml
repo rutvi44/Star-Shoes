@@ -7,18 +7,18 @@
     tools:context=".WomenFlatShoes">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <!-- First Shoe -->
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="#B767C8">
+            android:background="#B767C8"
+            android:orientation="vertical">
 
             <!-- Image of the First Shoe -->
             <ImageView
@@ -31,37 +31,37 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Women's Casual Flat Shoes for ballet"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="8dp" />
+                android:textStyle="bold" />
 
             <!-- Available Sizes -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Available Sizes: 6, 7, 8, 9"
-                android:textSize="16sp"
-                android:padding="8dp" />
+                android:textSize="16sp" />
 
             <!-- Price of the First Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Price: $25.99"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:padding="8dp" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <!-- Second Shoe -->
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="#4CE86D">
+            android:background="#4CE86D"
+            android:orientation="vertical">
 
             <!-- Image of the Second Shoe -->
             <ImageView
@@ -74,36 +74,36 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Women's Marck fisher flat wear"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="8dp" />
+                android:textStyle="bold" />
 
             <!-- Available Sizes -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Available Sizes: 5, 6, 7, 8, 9"
-                android:textSize="16sp"
-                android:padding="8dp" />
+                android:textSize="16sp" />
 
             <!-- Price of the Second Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Price: $30.99"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:padding="8dp" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <!-- Third Shoe -->
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#69B5B2">
+            android:background="#69B5B2"
+            android:orientation="vertical">
 
             <!-- Image of the Third Shoe -->
             <ImageView
@@ -116,27 +116,27 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Women's Elegant Flat Shoes from aldo"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:padding="8dp" />
+                android:textStyle="bold" />
 
             <!-- Available Sizes -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Available Sizes: 6, 7, 8"
-                android:textSize="16sp"
-                android:padding="8dp" />
+                android:textSize="16sp" />
 
             <!-- Price of the Third Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Price: $34.99"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:padding="8dp" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 

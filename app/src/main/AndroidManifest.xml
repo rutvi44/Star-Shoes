@@ -29,10 +29,6 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".MapsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" />
-        <activity
             android:name=".StoreLocation"
             android:exported="false"
             android:label="@string/title_activity_store_location" />
@@ -74,6 +70,24 @@
             android:exported="false" />
         <activity
             android:name=".WomenFlatShoes"
+            android:exported="false" />
+        <activity
+            android:name=".Cart"
+            android:exported="false" />
+        <activity
+            android:name=".Categories"
+            android:exported="false" />
+        <activity
+            android:name=".CheckOut"
+            android:exported="false" />
+        <activity
+            android:name=".Logout"
+            android:exported="false" />
+        <activity
+            android:name=".OrderHistory"
+            android:exported="false" />
+        <activity
+            android:name=".StoreRating"
             android:exported="false" />
     </application>
 

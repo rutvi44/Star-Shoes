@@ -48,36 +48,54 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(about);
             return true;
         } else if (itemId == R.id.nav_men_boots) {
-            Intent about = new Intent(this, MenBoot.class);
-            startActivity(about);
+            Intent menBoots = new Intent(this, MenBoot.class);
+            startActivity(menBoots);
             return true;
         } else if (itemId == R.id.nav_men_dress) {
-            Intent tvs = new Intent(this, MenDressShoes.class);
-            startActivity(tvs);
+            Intent menDress = new Intent(this, MenDressShoes.class);
+            startActivity(menDress);
             return true;
         } else if (itemId == R.id.nav_men_casual) {
-            Intent computers = new Intent(this, MenCasualShoes.class);
-            startActivity(computers);
+            Intent menCasual = new Intent(this, MenCasualShoes.class);
+            startActivity(menCasual);
             return true;
-        }
-        else if (itemId == R.id.nav_Women_flats) {
-        Intent computers = new Intent(this, WomenFlatShoes.class);
-        startActivity(computers);
+        } else if (itemId == R.id.nav_Women_flats) {
+            Intent wFlats = new Intent(this, WomenFlatShoes.class);
+            startActivity(wFlats);
         return true;
         } else if (itemId==R.id.nav_Women_heels) {
-        Intent computers = new Intent(this, WomenHeel.class);
-        startActivity(computers);
-        return true;
+            Intent wHeels = new Intent(this, WomenHeel.class);
+            startActivity(wHeels);
+            return true;
         } else if (itemId==R.id.nav_Women_wedges) {
-        Intent computers = new Intent(this, WomenWedges.class);
-        startActivity(computers);
-        return true;
+            Intent wWedges = new Intent(this, WomenWedges.class);
+            startActivity(wWedges);
+            return true;
         } else if (itemId==R.id.nav_store_locator) {
-        Intent computers = new Intent(this, StoreLocation.class);
-        startActivity(computers);
-        return true;
-        }
-        else {
+            Intent store = new Intent(this, StoreLocation.class);
+            startActivity(store);
+            return true;
+        }else if (itemId == R.id.nav_cart) {
+            Intent cart = new Intent(this, Cart.class);
+            startActivity(cart);
+            return true;
+        }else if (itemId == R.id.nav_checkout) {
+            Intent checkout = new Intent(this, CheckOut.class);
+            startActivity(checkout);
+            return true;
+        }else if (itemId == R.id.nav_logout) {
+            Intent logout = new Intent(this, Logout.class);
+            startActivity(logout);
+            return true;
+        }else if (itemId == R.id.nav_order_history) {
+            Intent orderHist = new Intent(this, OrderHistory.class);
+            startActivity(orderHist);
+            return true;
+        }else if (itemId == R.id.nav_store_rating) {
+            Intent storeRating = new Intent(this, StoreRating.class);
+            startActivity(storeRating);
+            return true;
+        }else {
             return super.onOptionsItemSelected(item);
         }
 

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Categories"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!-- Main Category Buttons -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_men"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Men"
+            android:background="@color/sky_blue"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:stateListAnimator="@null"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:foregroundGravity="center"
+            android:elevation="0dp" />
+
+    </FrameLayout>
+
+
+
+
+    <!-- Subcategory Buttons (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/layout_men_subcategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/sky_blue">
+
+        <Button
+            android:id="@+id/btn_men_casual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sky_blue"
+            android:layout_margin="13dp"
+            android:text="Casual" />
+
+        <Button
+            android:id="@+id/btn_men_dress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sky_blue"
+            android:layout_margin="13dp"
+            android:text="Dress" />
+
+        <Button
+            android:id="@+id/btn_men_boots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sky_blue"
+            android:layout_margin="13dp"
+            android:text="Boots" />
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_women"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Women"
+            android:background="@color/sky_blue"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:stateListAnimator="@null"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:foregroundGravity="center"
+            android:elevation="0dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_women_subcategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#60F893">
+
+        <Button
+            android:id="@+id/btn_women_flats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:text="Flats" />
+
+        <Button
+            android:id="@+id/btn_women_heels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:text="Heels" />
+
+        <Button
+            android:id="@+id/btn_women_wedges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:text="Wedges" />
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_kids"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Kids"
+            android:background="@color/sky_blue"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:stateListAnimator="@null"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:foregroundGravity="center"
+            android:elevation="0dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="#E6BB9E"
+        android:id="@+id/layout_kids_subcategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_kids_rain_boots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:text="Rain Boots" />
+
+        <Button
+            android:id="@+id/btn_kids_light_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:text="Light-up Shoes" />
+
+        <Button
+            android:id="@+id/btn_kids_dress_shoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:text="Dress Shoes" />
+
+        <Button
+            android:id="@+id/btn_kids_clogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dp"
+            android:text="Clogs" />
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
