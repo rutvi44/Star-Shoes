@@ -31,9 +31,6 @@ import java.util.ArrayList;
 import java.util.List;
 public class WomenFlatShoes extends AppCompatActivity {
 
-
-
-
     private CheckBox cbComp1, cbComp2, cbComp3;
     private Button btnAdd, btnCheckout;
     // List to store selected item IDs
@@ -48,7 +45,7 @@ public class WomenFlatShoes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_women_flat_shoes);
 
-// Initialize checkboxes and buttons
+        // Initialize checkboxes and buttons
         cbComp1 = findViewById(R.id.checkbox_shoe1);
         cbComp2 = findViewById(R.id.checkbox_shoe2);
         cbComp3 = findViewById(R.id.checkbox_shoe3);
@@ -79,50 +76,79 @@ public class WomenFlatShoes extends AppCompatActivity {
 
     // Method to add selected items to the cart
     // Method to add selected items to the cart
+//    private void addToCart() {
+//        // Initialize the database handler
+//        dbHandler = new DBHandler(this);
+//
+//        // Clear the list of selected items
+//        selectedItems.clear();
+//
+//        // Check which checkboxes are selected and add their IDs to the list
+//        if (cbComp1.isChecked()) {
+//            Drawable drawable = ContextCompat.getDrawable(this, R.drawable.flat1ballet);
+//
+//            // Create an Item object for the first checkbox selection
+//            Item item1 = new Item(1, "Ballet Shoe", "Women's Casual Flat Shoes for ballet", 25.99, 1);
+//            selectedItems.add(item1);
+//        }
+//        if (cbComp2.isChecked()) {
+//            Drawable drawable = ContextCompat.getDrawable(this, R.drawable.marcfisherflat2);
+//
+//            // Create an Item object for the second checkbox selection
+//            Item item2 = new Item(2, "Marck Fisher", "Women's Marck fisher flat wear", 30.99, 2);
+//            selectedItems.add(item2);
+//        }
+//        if (cbComp3.isChecked()) {
+//            Drawable drawable = ContextCompat.getDrawable(this, R.drawable.aldo3flat);
+//
+//            // Create an Item object for the third checkbox selection
+//            Item item3 = new Item(3, "Aldo shoes", "Women's Elegant Flat Shoes from Aldo", 34.99, 3);
+//            selectedItems.add(item3);
+//        }
+//
+//
+//        // Add the selected items to the database or perform any other necessary action
+//        for (Item item : selectedItems) {
+//            long itemId = dbHandler.addItem(item);
+//            if (itemId != -1) {
+//                // Item added successfully
+//                Toast.makeText(getApplicationContext(), "Successfully added item to cart", Toast.LENGTH_SHORT).show();
+//            } else {
+//                // Failed to add item to cart
+//                Toast.makeText(getApplicationContext(), "Failed to add item to cart", Toast.LENGTH_SHORT).show();
+//                Log.e("addToCart", "Failed to add item to cart: " + item.getName());
+//            }
+//        }
+//    }
+
     private void addToCart() {
         // Initialize the database handler
         dbHandler = new DBHandler(this);
+
+        // Assuming userId is already initialized or obtained from somewhere
+        int userId = 1; // Replace 1 with the actual userId
 
         // Clear the list of selected items
         selectedItems.clear();
 
         // Check which checkboxes are selected and add their IDs to the list
         if (cbComp1.isChecked()) {
-            Drawable drawable = ContextCompat.getDrawable(this, R.drawable.flat1ballet);
-
-            // Create an Item object for the first checkbox selection
-            Item item1 = new Item(1, "Ballet Shoe", "Women's Casual Flat Shoes for ballet", 25.99, 1);
-            selectedItems.add(item1);
+            // Add item 1 to cart
+            dbHandler.addItemToCart(userId, 1, 1);
         }
         if (cbComp2.isChecked()) {
-            Drawable drawable = ContextCompat.getDrawable(this, R.drawable.marcfisherflat2);
-
-            // Create an Item object for the second checkbox selection
-            Item item2 = new Item(2, "Marck Fisher", "Women's Marck fisher flat wear", 30.99, 2);
-            selectedItems.add(item2);
+            // Add item 2 to cart
+            dbHandler.addItemToCart(userId, 2, 1);
         }
         if (cbComp3.isChecked()) {
-            Drawable drawable = ContextCompat.getDrawable(this, R.drawable.aldo3flat);
-
-            // Create an Item object for the third checkbox selection
-            Item item3 = new Item(3, "Aldo shoes", "Women's Elegant Flat Shoes from Aldo", 34.99, 3);
-            selectedItems.add(item3);
+            // Add item 3 to cart
+            dbHandler.addItemToCart(userId, 3, 1);
         }
 
-
-        // Add the selected items to the database or perform any other necessary action
-        for (Item item : selectedItems) {
-            long itemId = dbHandler.addItem(item);
-            if (itemId != -1) {
-                // Item added successfully
-                Toast.makeText(getApplicationContext(), "Successfully added item to cart", Toast.LENGTH_SHORT).show();
-            } else {
-                // Failed to add item to cart
-                Toast.makeText(getApplicationContext(), "Failed to add item to cart", Toast.LENGTH_SHORT).show();
-                Log.e("addToCart", "Failed to add item to cart: " + item.getName());
-            }
-        }
+        // Display a message indicating that items have been added to the cart
+        Toast.makeText(getApplicationContext(), "Successfully added item(s) to cart", Toast.LENGTH_SHORT).show();
     }
+
 
 
     // Method to handle the checkout action

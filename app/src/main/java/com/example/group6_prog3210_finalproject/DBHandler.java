@@ -72,6 +72,19 @@ public class DBHandler extends SQLiteOpenHelper {
                     ");";
 
 
+    // Add item to cart
+// Add item to cart
+    public long addItemToCart(int userId, int itemId, int quantity) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_USER_ID_FK, userId);
+        values.put(COLUMN_ITEM_ID_FK, itemId);
+        values.put(COLUMN_QUANTITY, quantity);
+        long id = db.insert(TABLE_CART, null, values);
+        db.close();
+        return id;
+    }
+
     /**
      * Constructor that takes the context to allow the database creation.
      * @param context The context through which to access the database.
@@ -157,10 +170,6 @@ public class DBHandler extends SQLiteOpenHelper {
         // return item
         return item;
     }
-
-
-
-    // Getting All Items
     // Getting All Items
     public List<Item> getAllItems() {
         List<Item> itemList = new ArrayList<Item>();
@@ -191,9 +200,6 @@ public class DBHandler extends SQLiteOpenHelper {
         // return item list
         return itemList;
     }
-
-
-    // Updating single item
     // Updating single item
     public int updateItem(Item item) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -207,8 +213,6 @@ public class DBHandler extends SQLiteOpenHelper {
         return db.update(TABLE_ITEMS, values, COLUMN_ITEM_ID + " = ?",
                 new String[]{String.valueOf(item.getId())});
     }
-
-
     // Deleting single item
     public void deleteItem(Item item) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -216,7 +220,6 @@ public class DBHandler extends SQLiteOpenHelper {
                 new String[]{String.valueOf(item.getId())});
         db.close();
     }
-
     // Getting items Count
     public int getItemsCount() {
         String countQuery = "SELECT  * FROM " + TABLE_ITEMS;
@@ -226,6 +229,81 @@ public class DBHandler extends SQLiteOpenHelper {
         cursor.close();
 
         // return count
+        return count;
+    }
+
+//    // Add item to cart
+//    public long addItemToCart(int userId, int itemId, String itemName, String itemDescription, double itemPrice, int quantity) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues values = new ContentValues();
+//        values.put(COLUMN_USER_ID_FK, userId);
+//        values.put(COLUMN_ITEM_ID_FK, itemId);
+//        values.put(COLUMN_ITEM_NAME, itemName); // Add item name
+//        values.put(COLUMN_DESCRIPTION, itemDescription); // Add item description
+//        values.put(COLUMN_PRICE, itemPrice); // Add item price
+//        values.put(COLUMN_QUANTITY, quantity);
+//        long id = db.insert(TABLE_CART, null, values);
+//        db.close();
+//        return id;
+//    }
+
+    // Update quantity of item in cart
+    public int updateCartItemQuantity(int cartId, int quantity) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_QUANTITY, quantity);
+        return db.update(TABLE_CART, values, COLUMN_CART_ID + " = ?", new String[]{String.valueOf(cartId)});
+    }
+
+    // Remove item from cart
+    public void removeItemFromCart(int cartId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_CART, COLUMN_CART_ID + " = ?", new String[]{String.valueOf(cartId)});
+        db.close();
+    }
+
+    // Get all items in cart for a user
+    public List<CartItem> getAllCartItems(int userId) {
+        List<CartItem> cartItemList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_CART + " WHERE " + COLUMN_USER_ID_FK + " = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(userId)});
+
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                CartItem cartItem = new CartItem();
+                int cartIdIndex = cursor.getColumnIndex(COLUMN_CART_ID);
+                int userIdIndex = cursor.getColumnIndex(COLUMN_USER_ID_FK);
+                int itemIdIndex = cursor.getColumnIndex(COLUMN_ITEM_ID_FK);
+                int quantityIndex = cursor.getColumnIndex(COLUMN_QUANTITY);
+
+                // Check if the column indexes are valid
+                if (cartIdIndex >= 0 && userIdIndex >= 0 && itemIdIndex >= 0 && quantityIndex >= 0) {
+                    cartItem.setCartId(cursor.getInt(cartIdIndex));
+                    cartItem.setUserId(cursor.getInt(userIdIndex));
+                    cartItem.setItemId(cursor.getInt(itemIdIndex));
+                    cartItem.setQuantity(cursor.getInt(quantityIndex));
+                    cartItemList.add(cartItem);
+                }
+            }
+            cursor.close();
+        }
+
+        db.close();
+        return cartItemList;
+    }
+
+    // Get total number of items in cart for a user
+    public int getCartItemCount(int userId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT COUNT(*) FROM " + TABLE_CART + " WHERE " + COLUMN_USER_ID_FK + " = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(userId)});
+        int count = 0;
+        if (cursor != null && cursor.moveToFirst()) {
+            count = cursor.getInt(0);
+        }
+        cursor.close();
+        db.close();
         return count;
     }
 
