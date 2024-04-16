@@ -117,10 +117,6 @@ public class Categories extends AppCompatActivity implements View.OnClickListene
         }
     }
 
-
-
-
-
     private void toggleVisibility(LinearLayout layout) {
         if (layout.getVisibility() == View.VISIBLE) {
             layout.setVisibility(View.GONE);
