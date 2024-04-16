@@ -97,11 +97,7 @@ public class Categories extends AppCompatActivity implements View.OnClickListene
             // Handle click for women's wedges category
             intent = new Intent(this, WomenWedges.class);
             startActivity(intent);
-            // change all the home activity with actyual activiyt777
-            //33333333333333333333333333333333333333333
-            //#####################3
-
-            //###########3
+            // change all the home activity with actual activity
         } else if (id == R.id.btn_kids_rain_boots) {
             // Handle click for kids' rain boots category
             intent = new Intent(this, HomeActivity.class);

@@ -52,6 +52,12 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
+            <CheckBox
+                android:id="@+id/checkbox_shoe1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to Cart"
+                android:padding="8dp" />
 
         </LinearLayout>
 
@@ -95,6 +101,12 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
+            <CheckBox
+                android:id="@+id/checkbox_shoe2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to Cart"
+                android:padding="8dp" />
 
         </LinearLayout>
 
@@ -137,9 +149,28 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
+            <CheckBox
+                android:id="@+id/checkbox_shoe3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to Cart"
+                android:padding="8dp" />
 
         </LinearLayout>
+        <Button
+            android:id="@+id/button_add_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:layout_marginTop="16dp" />
 
+        <!-- Checkout Button -->
+        <Button
+            android:id="@+id/button_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:layout_marginTop="8dp" />
     </LinearLayout>
 
 </ScrollView>

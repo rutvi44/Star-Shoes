@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KidsDressShoes">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+    <!-- First Dress Shoe -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#B767C8">
+
+        <!-- Image of the First Dress Shoe -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dressshoes1" />
+
+        <!-- Name of the First Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Classic Oxford"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <!-- Description of the First Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description: Traditional style with laces"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <!-- Price of the First Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price: $29.99"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <!-- Checkbox to Add to Cart -->
+        <CheckBox
+            android:id="@+id/checkbox_shoe1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Second Dress Shoe -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#4CE86D">
+
+        <!-- Image of the Second Dress Shoe -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dressshoeschild2" />
+
+        <!-- Name of the Second Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Patent Leather Mary Janes"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <!-- Description of the Second Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description: Glossy finish with strap"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <!-- Price of the Second Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price: $34.99"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <!-- Checkbox to Add to Cart -->
+        <CheckBox
+            android:id="@+id/checkbox_shoe2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+    <!-- Third Dress Shoe -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#69B5B2">
+
+        <!-- Image of the Third Dress Shoe -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dressshoeschiild3" />
+
+        <!-- Name of the Third Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buckle Strap Loafers"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <!-- Description of the Third Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description: Comfortable slip-on design"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <!-- Price of the Third Dress Shoe -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price: $39.99"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <!-- Checkbox to Add to Cart -->
+        <CheckBox
+            android:id="@+id/checkbox_shoe3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+        <!-- Button to Add Selected Light-up Shoes to Cart -->
+        <Button
+            android:id="@+id/button_add_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:layout_marginTop="16dp" />
+
+        <!-- Button to Proceed to Checkout -->
+        <Button
+            android:id="@+id/button_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

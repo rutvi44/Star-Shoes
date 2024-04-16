@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WomenFlatShoes">
+    tools:context=".KidsLightUpShoes">
 
     <LinearLayout
         android:orientation="vertical"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
 
-        <!-- First Shoe -->
+        <!-- First Light-up Shoe -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -20,39 +20,40 @@
             android:layout_marginBottom="16dp"
             android:background="#B767C8">
 
-            <!-- Image of the First Shoe -->
+            <!-- Image of the First Light-up Shoe -->
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="396dp"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/flat1ballet" />
+                android:src="@drawable/lightup1" />
 
-            <!-- Description of the First Shoe -->
+            <!-- Name of the First Light-up Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Women's Casual Flat Shoes for ballet"
+                android:text="Sparkle Light Shoes"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
 
-            <!-- Available Sizes -->
+            <!-- Description of the First Light-up Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Available Sizes: 6, 7, 8, 9"
+                android:text="Description: Glittery and colorful with LED lights"
                 android:textSize="16sp"
                 android:padding="8dp" />
 
-            <!-- Price of the First Shoe -->
+            <!-- Price of the First Light-up Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Price: $25.99"
+                android:text="Price: $29.99"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
-            <!-- Checkbox for the First Shoe -->
+
+            <!-- Checkbox to Add to Cart -->
             <CheckBox
                 android:id="@+id/checkbox_shoe1"
                 android:layout_width="wrap_content"
@@ -60,11 +61,9 @@
                 android:text="Add to Cart"
                 android:padding="8dp" />
 
-
-
         </LinearLayout>
 
-        <!-- Second Shoe -->
+        <!-- Second Light-up Shoe -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -72,39 +71,41 @@
             android:layout_marginBottom="16dp"
             android:background="#4CE86D">
 
-            <!-- Image of the Second Shoe -->
+            <!-- Image of the Second Light-up Shoe -->
+
+            <!-- Name of the Second Light-up Shoe -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/marcfisherflat2" />
+                android:src="@drawable/lightup2" />
 
-            <!-- Description of the Second Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Women's Marck fisher flat wear"
+                android:text="Neon Glow Shoes"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
 
-            <!-- Available Sizes -->
+            <!-- Description of the Second Light-up Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Available Sizes: 5, 6, 7, 8, 9"
+                android:text="Description: Bright neon colors with flashing lights"
                 android:textSize="16sp"
                 android:padding="8dp" />
 
-            <!-- Price of the Second Shoe -->
+            <!-- Price of the Second Light-up Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Price: $30.99"
+                android:text="Price: $34.99"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
-            <!-- Checkbox for the First Shoe -->
+
+            <!-- Checkbox to Add to Cart -->
             <CheckBox
                 android:id="@+id/checkbox_shoe2"
                 android:layout_width="wrap_content"
@@ -114,46 +115,47 @@
 
         </LinearLayout>
 
-        <!-- Third Shoe -->
+        <!-- Third Light-up Shoe -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#69B5B2">
 
-            <!-- Image of the Third Shoe -->
+            <!-- Image of the Third Light-up Shoe -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/aldo3flat" />
+                android:src="@drawable/lightup3" />
 
-            <!-- Description of the Third Shoe -->
+            <!-- Name of the Third Light-up Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Women's Elegant Flat Shoes from aldo"
+                android:text="Glow-in-the-Dark Shoes"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
 
-            <!-- Available Sizes -->
+            <!-- Description of the Third Light-up Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Available Sizes: 6, 7, 8"
+                android:text="Description: Illuminates in the dark with various patterns"
                 android:textSize="16sp"
                 android:padding="8dp" />
 
-            <!-- Price of the Third Shoe -->
+            <!-- Price of the Third Light-up Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Price: $34.99"
+                android:text="Price: $39.99"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
-            <!-- Checkbox for the First Shoe -->
+
+            <!-- Checkbox to Add to Cart -->
             <CheckBox
                 android:id="@+id/checkbox_shoe3"
                 android:layout_width="wrap_content"
@@ -162,6 +164,8 @@
                 android:padding="8dp" />
 
         </LinearLayout>
+
+        <!-- Button to Add Selected Light-up Shoes to Cart -->
         <Button
             android:id="@+id/button_add_to_cart"
             android:layout_width="match_parent"
@@ -169,7 +173,7 @@
             android:text="Add to Cart"
             android:layout_marginTop="16dp" />
 
-        <!-- Checkout Button -->
+        <!-- Button to Proceed to Checkout -->
         <Button
             android:id="@+id/button_checkout"
             android:layout_width="match_parent"

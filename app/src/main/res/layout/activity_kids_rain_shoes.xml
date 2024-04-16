@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WomenFlatShoes">
+    tools:context=".KidsRainShoes">
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
 
-        <!-- First Shoe -->
+        <!-- First Rain Boot -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -20,31 +21,31 @@
             android:layout_marginBottom="16dp"
             android:background="#B767C8">
 
-            <!-- Image of the First Shoe -->
+            <!-- Image of the First Rain Boot -->
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="396dp"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/flat1ballet" />
+                android:src="@drawable/rainboot1" />
 
-            <!-- Description of the First Shoe -->
+            <!-- Name of the First Rain Boot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Women's Casual Flat Shoes for ballet"
+                android:text="Fendi shoes"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
 
-            <!-- Available Sizes -->
+            <!-- Description of the First Rain Boot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Available Sizes: 6, 7, 8, 9"
+                android:text="Description: Available in various colors"
                 android:textSize="16sp"
                 android:padding="8dp" />
 
-            <!-- Price of the First Shoe -->
+            <!-- Price of the First Rain Boot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,19 +53,18 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
-            <!-- Checkbox for the First Shoe -->
+
+            <!-- Checkbox to Add to Cart -->
             <CheckBox
-                android:id="@+id/checkbox_shoe1"
+                android:id="@+id/checkbox_boot1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Add to Cart"
                 android:padding="8dp" />
 
-
-
         </LinearLayout>
 
-        <!-- Second Shoe -->
+        <!-- Second Rain Boot -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -72,31 +72,32 @@
             android:layout_marginBottom="16dp"
             android:background="#4CE86D">
 
-            <!-- Image of the Second Shoe -->
+            <!-- Image of the Second Rain Boot -->
+
+            <!-- Name of the Second Rain Boot -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/marcfisherflat2" />
+                android:src="@drawable/rainboot2" />
 
-            <!-- Description of the Second Shoe -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Women's Marck fisher flat wear"
+                android:text="Prada Rain Boot"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
 
-            <!-- Available Sizes -->
+            <!-- Description of the Second Rain Boot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Available Sizes: 5, 6, 7, 8, 9"
+                android:text="Description: Waterproof and comfortable"
                 android:textSize="16sp"
                 android:padding="8dp" />
 
-            <!-- Price of the Second Shoe -->
+            <!-- Price of the Second Rain Boot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,9 +105,10 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
-            <!-- Checkbox for the First Shoe -->
+
+            <!-- Checkbox to Add to Cart -->
             <CheckBox
-                android:id="@+id/checkbox_shoe2"
+                android:id="@+id/checkbox_boot2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Add to Cart"
@@ -114,38 +116,38 @@
 
         </LinearLayout>
 
-        <!-- Third Shoe -->
+        <!-- Third Rain Boot -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#69B5B2">
 
-            <!-- Image of the Third Shoe -->
+            <!-- Image of the Third Rain Boot -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/aldo3flat" />
+                android:src="@drawable/rainboot3" />
 
-            <!-- Description of the Third Shoe -->
+            <!-- Name of the Third Rain Boot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Women's Elegant Flat Shoes from aldo"
+                android:text="LV  Rain boot"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
 
-            <!-- Available Sizes -->
+            <!-- Description of the Third Rain Boot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Available Sizes: 6, 7, 8"
+                android:text="Description: Cute and stylish design"
                 android:textSize="16sp"
                 android:padding="8dp" />
 
-            <!-- Price of the Third Shoe -->
+            <!-- Price of the Third Rain Boot -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -153,15 +155,18 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="8dp" />
-            <!-- Checkbox for the First Shoe -->
+
+            <!-- Checkbox to Add to Cart -->
             <CheckBox
-                android:id="@+id/checkbox_shoe3"
+                android:id="@+id/checkbox_boot3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Add to Cart"
                 android:padding="8dp" />
 
         </LinearLayout>
+
+        <!-- Button to Add Selected Rain Boots to Cart -->
         <Button
             android:id="@+id/button_add_to_cart"
             android:layout_width="match_parent"
@@ -169,7 +174,7 @@
             android:text="Add to Cart"
             android:layout_marginTop="16dp" />
 
-        <!-- Checkout Button -->
+        <!-- Button to Proceed to Checkout -->
         <Button
             android:id="@+id/button_checkout"
             android:layout_width="match_parent"
