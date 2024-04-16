@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Welcome to shoe star"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="22sp" />
 
             <TextView
@@ -32,7 +32,7 @@
                 android:layout_below="@id/txt1"
                 android:layout_marginTop="10dp"
                 android:text=" checkout menu "
-                android:textColor="#FFFFFF"
+                android:textColor="@color/black"
                 android:textSize="22sp" />
 
             <ImageView
