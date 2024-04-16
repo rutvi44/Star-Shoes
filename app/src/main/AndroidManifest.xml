@@ -72,6 +72,15 @@
             android:name=".WomenFlatShoes"
             android:exported="false" />
         <activity
+            android:name=".KidsDressShoes"
+            android:exported="false" />
+        <activity
+            android:name=".KidsLightUpShoes"
+            android:exported="false" />
+        <activity
+            android:name=".KidsRainShoes"
+            android:exported="false" />
+        <activity
             android:name=".Cart"
             android:exported="false" />
         <activity
@@ -79,9 +88,6 @@
             android:exported="false" />
         <activity
             android:name=".CheckOut"
-            android:exported="false" />
-        <activity
-            android:name=".Logout"
             android:exported="false" />
         <activity
             android:name=".OrderHistory"

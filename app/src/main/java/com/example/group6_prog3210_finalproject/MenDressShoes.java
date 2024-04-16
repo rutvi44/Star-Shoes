@@ -116,5 +116,10 @@ public class MenDressShoes extends AppCompatActivity {
         // For demonstration purposes, let's just show a toast message
         Toast.makeText(getApplicationContext(), "Checkout action performed", Toast.LENGTH_SHORT).show();
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
+    }
 }

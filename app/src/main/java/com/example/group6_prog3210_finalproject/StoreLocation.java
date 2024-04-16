@@ -3,6 +3,8 @@ package com.example.group6_prog3210_finalproject;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -47,5 +49,12 @@ public class StoreLocation extends FragmentActivity implements OnMapReadyCallbac
         LatLng sydney = new LatLng(43.478291, -80.519272);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Store Locator"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
     }
 }

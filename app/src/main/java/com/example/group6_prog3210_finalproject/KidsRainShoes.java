@@ -2,6 +2,8 @@ package com.example.group6_prog3210_finalproject;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -75,5 +77,11 @@ public class KidsRainShoes extends AppCompatActivity {
 
     private void checkout() {
         Toast.makeText(getApplicationContext(), "Checkout action performed", Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu,menu);
+        return true;
     }
 }

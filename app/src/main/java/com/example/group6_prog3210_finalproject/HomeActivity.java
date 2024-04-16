@@ -2,6 +2,7 @@ package com.example.group6_prog3210_finalproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
@@ -134,11 +136,12 @@ public class HomeActivity extends AppCompatActivity {
         Tab7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create an Intent to navigate to the CategoryActivity
-                Intent intent = new Intent(HomeActivity.this, Logout.class);
-
-                // Start the CategoryActivity
-                startActivity(intent);
+//                // Create an Intent to navigate to the CategoryActivity
+//                Intent intent = new Intent(HomeActivity.this, Logout.class);
+//
+//                // Start the CategoryActivity
+//                startActivity(intent);
+                showLogoutDialog();
             }
         });
 
@@ -161,7 +164,40 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+    // Method to show the logout confirmation dialog
+    private void showLogoutDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.logout_popup, null);
+        builder.setView(dialogView);
 
+        // Set up the buttons
+        Button btnYes = dialogView.findViewById(R.id.btnYes);
+        Button btnNo = dialogView.findViewById(R.id.btnNo);
+
+        // Create and show the dialog
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+
+        // Set OnClickListener for the "Yes" button
+        btnYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the login page
+                Intent intent = new Intent(HomeActivity.this, LogInActivity.class);
+                startActivity(intent);
+                finish(); // Close the current activity
+            }
+        });
+
+        // Set OnClickListener for the "No" button
+        btnNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss(); // Dismiss the dialog
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -205,6 +241,18 @@ public class HomeActivity extends AppCompatActivity {
             Intent wWedges = new Intent(this, WomenWedges.class);
             startActivity(wWedges);
             return true;
+        } else if (itemId == R.id.nav_Kids_rainboots) {
+            Intent kRains = new Intent(this, KidsRainShoes.class);
+            startActivity(kRains);
+            return true;
+        } else if (itemId==R.id.nav_Kids_lightUpShoes) {
+            Intent klightUp = new Intent(this, KidsLightUpShoes.class);
+            startActivity(klightUp);
+            return true;
+        } else if (itemId==R.id.nav_Kids_DressShoes) {
+            Intent kDress = new Intent(this, KidsDressShoes.class);
+            startActivity(kDress);
+            return true;
         } else if (itemId==R.id.nav_store_locator) {
             Intent store = new Intent(this, StoreLocation.class);
             startActivity(store);
@@ -218,8 +266,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(checkout);
             return true;
         }else if (itemId == R.id.nav_logout) {
-            Intent logout = new Intent(this, Logout.class);
-            startActivity(logout);
+            showLogoutDialog();
             return true;
         }else if (itemId == R.id.nav_order_history) {
             Intent orderHist = new Intent(this, OrderHistory.class);

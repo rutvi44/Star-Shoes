@@ -20,7 +20,7 @@ public class Cart extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
     private DBHandler dbHandler;
-    TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt;
+    TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt, btnCheckout;
     private double tax;
     private ScrollView scrollView;
 
@@ -47,6 +47,16 @@ public class Cart extends AppCompatActivity {
             }
         });
 
+        // Set an OnClickListener for the checkout button
+        btnCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CheckoutActivity
+                Intent intent = new Intent(Cart.this, CheckOut.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initView() {
@@ -57,6 +67,7 @@ public class Cart extends AppCompatActivity {
         totalTxt = findViewById(R.id.totalTxt);
         emptyTxt = findViewById(R.id.emptyTxt);
         scrollView = findViewById(R.id.scrollView2);
+        btnCheckout = findViewById(R.id.textView);
     }
 
     private void initList() {
@@ -104,4 +115,6 @@ public class Cart extends AppCompatActivity {
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
+
+
 }
