@@ -7,6 +7,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,140 @@ public class HomeActivity extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
+
+        // Find the LinearLayout representing the "Aboiut" tab
+        LinearLayout Tab = findViewById(R.id.aboutPage);
+
+        // Set a click listener for the "About" tab
+        Tab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CategoryActivity
+                Intent intent = new Intent(HomeActivity.this, ActivityAbout.class);
+
+                // Start the CategoryActivity
+                startActivity(intent);
+            }
+        });
+
+        //for catagories
+        // Find the LinearLayout representing the "Categories" tab
+        LinearLayout Tab2 = findViewById(R.id.catagoryPageHome);
+
+        // Set a click listener for the "Categories" tab
+        Tab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CategoryActivity
+                Intent intent = new Intent(HomeActivity.this, Categories.class);
+
+                // Start the CategoryActivity
+                startActivity(intent);
+            }
+        });
+
+
+
+        // for order history
+        // Find the LinearLayout representing the "Categories" tab
+        LinearLayout Tab3 = findViewById(R.id.OrderHistoryHome);
+
+        // Set a click listener for the "Categories" tab
+        Tab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CategoryActivity
+                Intent intent = new Intent(HomeActivity.this,OrderHistory.class);
+
+                // Start the CategoryActivity
+                startActivity(intent);
+            }
+        });
+
+        //for cart
+        // Find the LinearLayout representing the "Categories" tab
+        LinearLayout Tab4 = findViewById(R.id.cartHome);
+
+        // Set a click listener for the "Categories" tab
+        Tab4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CategoryActivity
+                Intent intent = new Intent(HomeActivity.this, Cart.class);
+
+                // Start the CategoryActivity
+                startActivity(intent);
+            }
+        });
+        //for stroe location
+
+        // Find the LinearLayout representing the "Categories" tab
+        LinearLayout Tab5 = findViewById(R.id.storeLocationHome);
+
+        // Set a click listener for the "Categories" tab
+        Tab5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CategoryActivity
+                Intent intent = new Intent(HomeActivity.this, StoreLocation.class);
+
+                // Start the CategoryActivity
+                startActivity(intent);
+            }
+        });
+        //for chek out
+
+        // Find the LinearLayout representing the "Categories" tab
+        LinearLayout Tab6 = findViewById(R.id.checkOutPageHome);
+
+        // Set a click listener for the "Categories" tab
+        Tab6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CategoryActivity
+                Intent intent = new Intent(HomeActivity.this, CheckOut.class);
+
+                // Start the CategoryActivity
+                startActivity(intent);
+            }
+        });
+        // for logout
+
+        // Find the LinearLayout representing the "Categories" tab
+        LinearLayout Tab7 = findViewById(R.id.LogoutHome);
+
+        // Set a click listener for the "Categories" tab
+        Tab7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CategoryActivity
+                Intent intent = new Intent(HomeActivity.this, Logout.class);
+
+                // Start the CategoryActivity
+                startActivity(intent);
+            }
+        });
+
+        // for store rating
+        // Find the LinearLayout representing the "Categories" tab
+        LinearLayout Tab8 = findViewById(R.id.storeRatingHome);
+
+        // Set a click listener for the "Categories" tab
+        Tab8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to navigate to the CategoryActivity
+                Intent intent = new Intent(HomeActivity.this, StoreRating.class);
+
+                // Start the CategoryActivity
+                startActivity(intent);
+            }
+        });
+
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
